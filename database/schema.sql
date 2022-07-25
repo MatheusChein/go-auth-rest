@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS users (
   id UUID NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
   name VARCHAR NOT NULL,
   email VARCHAR UNIQUE,
-  password VARCHAR NOT NULL
+  password BYTEA NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS calendars (
